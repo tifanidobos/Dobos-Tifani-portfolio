@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    background-color: white;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #826c3f;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.split {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: width 0.3s ease-in-out;
+}
+
+.left {
+    width: 50%;
+    background: url('one.png') no-repeat right center/cover;
+    left: 0;
+}
+
+.right {
+    width: 50%;
+    background: url('ketto.png') no-repeat left center/cover;
+    right: 0;
+}
+
+.split h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: black; 
+    transition: color 0.3s ease; 
+}
+
+.split.left:hover h1 {
+    color: #826c3f; 
+}
+.split.right:hover h1 {
+    color: #716f6b; 
+}
+
+.descriptionegy { /*ahogyan tudok dolgozni; */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #716f6b;
+    margin-top: 10px;
+}
+.descriptionkettő { /*ahogyan szeretek dolgozni; */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #826c3f;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .split h1 {
+        font-size: 2rem;
+    }
+}
+
+.split.right:hover {
+    background-color: transparent; 
+}
+
+.split.left:hover {
+    background-color: transparent; 
+}

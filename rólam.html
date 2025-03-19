@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8"><!--lapocska-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rólam</title>
+    <link rel="stylesheet" href="index.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logófehér.png">
+    <style>
+        /* zene stílus */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #181818;
+            padding: 15px;
+            width: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .music-player img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .music-info {
+            flex: 1;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .music-info h4 {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .music-info p {
+            margin: 3px 0 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .controls img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .controls img:hover {
+            opacity: 0.7;
+        }
+        /* zene stílus */
+
+        .kapcsolat-page p1 {
+            color: black;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 25%; 
+            right: 65%; 
+            animation: slideOutLeft 0.5s ease-out 2s forwards;
+        }
+       
+        .kapcsolat-page p2 {
+            color: black;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 25%; 
+            left: 35%;
+            opacity: 0;
+            transform: translateX(100%);
+            animation: slideInRight 0.5s ease-in 1.5s forwards;
+        }
+
+        .kapcsolat-page p3 {
+            color: black;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            position: absolute;
+            top: 43%; 
+            left: 40%; 
+        }
+
+        .kapcsolat-page p4 {
+            color:black;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            position: absolute;
+            top: 43%; 
+            left: 69%; 
+        }
+
+        .kapcsolat-page p6 {
+            color: black;
+            font-size: 1.2rem;
+            font-family: 'Montserrat', sans-serif;
+            position: absolute;
+            top: 37%; 
+            left: 30%; 
+        }
+        
+        .kapcsolat-page img {
+            width: 400px;
+            position: absolute;
+        }
+
+        .kapcsolat-page .icon1 { top: 40%;  right: 65%;}
+
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOutLeft {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header> <!--fejléc ezt ne piszkáljam soha-->
+        <div class="logo">
+            <a href="index.html">
+                <img src="logófekete.png" alt="Dobos Tifani logó">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="rólam.html">Rólam</a></li>
+                <li><a href="portfólió.html">Portfólió</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                <li><a href="önéletrajz.html">Önéletrajz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="kapcsolat-page">
+        <p1>Rólam</p1>
+        <p2>Fun fact-ek a munkafolyamatról</p2>
+        <p3>Csikipárbaj közben leesett az egerem,<br>ezért végig a laptopommal bénáztam.<br><br>Március 10-én írtam le a listámra azt,<br>hogy megtanulok weboldalt kódolni,<br>előtte azt se tudtam mi a css vagy js.<br><br>A baleset miatt feküdnöm kellett, és<br>nagyon sokszor mentett meg ez a<br>projekt a teljes bedilizéstől.</p3>
+        <p4>Mindig Gáspár Lacitól az és Mégis forog<br>a föld, adott erőt a nehéz percekben.<br><br>Közben többször feleségül akartam<br>menni Lászlóhoz, a cicámhoz, de<br>féltem a párom nem örülne neki.<br><br>Megfogadtam, ha felvesznek valahova<br>a portfólióm miatt, összegyűjtöm a<br>fizum, és mellpalsztikára költöm.</p4>
+        <!--<p6>A tifanik viselkedése természetes élőhelyükön...</b></p6>-->
+        <img src="simonscatfour.jpg" alt="nope ikon" class="icon1">
+    </main>
+
+    <!-- Zene -->
+    <audio id="myAudio" loop>
+        <source src="zene2.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="music-player">
+        <img src="És mégis forog a föld.jpg" alt="Album borító" id="albumCover">
+        <div class="music-info">
+            <h4 id="songTitle">Cím: És mégis forog a föld</h4>
+            <p id="artistName">Előadó: Gáspár Laci</p>
+        </div>
+        <div class="controls">
+            <img src="start.png" alt="Play" onclick="playAudio()">
+            <img src="pause.png" alt="Pause" onclick="pauseAudio()">
+            <img src="reply.png" alt="Restart" onclick="restartAudio()">
+        </div>
+    </div>
+    <!-- Zene -->
+
+    <script>
+        /*zene irányítás */
+        const audio = document.getElementById("myAudio");
+        const songTitle = document.getElementById("songTitle");
+        const artistName = document.getElementById("artistName");
+        const albumCover = document.getElementById("albumCover");
+
+        function playAudio() {
+            audio.play();
+        }
+
+        function pauseAudio() {
+            audio.pause();
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+        }
+
+        audio.volume = 0.5;
+
+        songTitle.innerText = "És mégid forog a föld"; 
+        artistName.innerText = "Gáspár Laci"; 
+        /*zene irányítás */
+    </script>
+
+    <script src="index.js"></script><!--animáció-->
+</body>
+</html>

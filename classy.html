@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8"> <!--oldalfül-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classy</title>
+    <link rel="stylesheet" href="index.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logófehér.png">
+</head>
+<body>
+    <header> <!--fejléc ezt ne piszkáljam soha-->
+        <div class="logo">
+            <a href="index.html">
+                <img src="logófekete.png" alt="Dobos Tifani logó">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="rólam.html">Rólam</a></li>
+                <li><a href="portfólió.html">Portfólió</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                <li><a href="önéletrajz.html">Önéletrajz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+
+        .kapcsolat-page p1 {
+            color: black;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 30%; 
+            left: 10%; 
+        }
+        .kapcsolat-page p2 {
+            color: black;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            position: absolute;
+            top: 45%; 
+            left: 10%; 
+        }
+
+        .aji {
+    height: 200px;
+    position: absolute;
+    left: 52%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer; 
+    transition: all 0.3s ease-in-out;
+}
+
+.kártya1 { top: 34.5%; z-index: 2; }
+.kártya2 { top: 44.5%; z-index: 1; } 
+
+.random-kep {
+    height: 150px;
+    position: absolute;
+    transition: none; /* Nem változik kattintásra */
+    cursor: default;
+    
+}
+
+.kep1 { top: 48%; left: 44.9%;}
+.kep2 { top: 37%; left: 75.5%;}
+
+
+         /* zene stílus */
+         .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #181818;
+            padding: 15px;
+            width: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .music-player img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .music-info {
+            flex: 1;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .music-info h4 {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .music-info p {
+            margin: 3px 0 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .controls img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .controls img:hover {
+            opacity: 0.7;
+        }
+        /* zene stílus */
+    </style>
+
+    <main class="kapcsolat-page">
+        <p1>,,,</p1>
+        <p2>Kellett egy kis idő mire befogadtam azt a tényt, hogy<br>elsősorban nem nekem kell tetszen a munkám, nem<br> az én stílusomat, mondanivalómat kell tükröznie, ha-<br>nem azét, akinek éppen készítem. Az arany középút<br>megtalálása viszont az a cél szerintem, amire mindig<br>törekednünk kell, mivel egymás meglátásaiból, véle-<br>ményeiből tudunk építkezni és mégjobbat alkotni.</p2>
+        <img src="classy1.png" alt="Aji kártya 1" class="aji kártya1">
+        <img src="classy2.png" alt="Aji kártya 2" class="aji kártya2">
+        <img src="oda.png" alt="Random kép 1" class="random-kep kep1">
+        <img src="vissza.png" alt="Random kép 2" class="random-kep kep2">
+
+    </main>
+
+<!-- Zene -->
+<audio id="myAudio" loop>
+    <source src="zene6.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-player">
+    <img src="Moonlight.jpg" alt="Album borító" id="albumCover">
+    <div class="music-info">
+        <h4 id="songTitle">Cím: Moonlight</h4>
+        <p id="artistName">Előadó: Kali Uchis</p>
+    </div>
+    <div class="controls">
+        <img src="start.png" alt="Play" onclick="playAudio()">
+        <img src="pause.png" alt="Pause" onclick="pauseAudio()">
+        <img src="reply.png" alt="Restart" onclick="restartAudio()">
+    </div>
+</div>
+<!-- Zene -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".aji "); 
+
+    cards.forEach(card => {
+        card.addEventListener("click", function () {
+            let maxZIndex = Math.max(...Array.from(cards).map(img => parseInt(window.getComputedStyle(img).zIndex) || 0));
+            this.style.zIndex = maxZIndex + 1;
+        });
+    });
+});
+
+
+
+    /*zene irányítás */
+    const audio = document.getElementById("myAudio");
+    const songTitle = document.getElementById("songTitle");
+    const artistName = document.getElementById("artistName");
+    const albumCover = document.getElementById("albumCover");
+
+    function playAudio() {
+        audio.play();
+    }
+
+    function pauseAudio() {
+        audio.pause();
+    }
+
+    function restartAudio() {
+        audio.currentTime = 0;
+        audio.play();
+    }
+
+    audio.volume = 0.5;
+
+    songTitle.innerText = "Moonlight"; 
+    artistName.innerText = "Kali Uchis"; 
+    /*zene irányítás */
+</script>
+
+    <script src="index.js"></script><!--animáció-->
+</body>
+</html>

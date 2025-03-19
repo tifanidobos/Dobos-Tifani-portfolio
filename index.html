@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head> 
+    <meta charset="UTF-8"><!--lapocska-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobos Tifani</title> 
+    <link rel="stylesheet" href="index.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logófehér.png">
+    <style>
+        /* zene stílus */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #181818;
+            padding: 15px;
+            width: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .music-player img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .music-info {
+            flex: 1;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .music-info h4 {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .music-info p {
+            margin: 3px 0 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .controls img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .controls img:hover {
+            opacity: 0.7;
+        }
+        /* zene stílus */
+    </style>
+</head>
+<body>
+    <header> <!--fejléc ezt ne piszkáljam soha-->
+        <div class="logo">
+            <a href="index.html">
+                <img src="logófekete.png" alt="Dobos Tifani logó">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="rólam.html">Rólam</a></li>
+                <li><a href="portfólió.html">Portfólió</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                <li><a href="önéletrajz.html">Önéletrajz</a></li>
+            </ul>
+        </nav>        
+    </header>
+
+    <div class="container"> <!--classy, fancy-->
+        <div class="split left" id="classy">
+            <h1>Classy</h1>
+            <p class="descriptionegy">Ahogyan TUDOK dolgozni.</p>
+        </div>
+        <div class="split right" id="fancy">
+            <h1>Fancy</h1>
+            <p class="descriptionkettő">Ahogyan SZERETEK dolgozni.</p>
+        </div>
+    </div>
+
+    <!-- Zene -->
+    <audio id="myAudio" loop>
+        <source src="zene1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="music-player">
+        <img src="anxiety..jpg" alt="Album borító" id="albumCover">
+        <div class="music-info">
+            <h4 id="songTitle">Cím: anxiety.</h4>
+            <p id="artistName">Előadó: Keenyn Omari</p>
+        </div>
+        <div class="controls">
+            <img src="start.png" alt="Play" onclick="playAudio()">
+            <img src="pause.png" alt="Pause" onclick="pauseAudio()">
+            <img src="reply.png" alt="Restart" onclick="restartAudio()">
+        </div>
+    </div>
+    <!-- Zene -->
+
+    <script>
+        /*zene irányítás */
+        const audio = document.getElementById("myAudio");
+        const songTitle = document.getElementById("songTitle");
+        const artistName = document.getElementById("artistName");
+        const albumCover = document.getElementById("albumCover");
+
+        function playAudio() {
+            audio.play();
+        }
+
+        function pauseAudio() {
+            audio.pause();
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+        }
+
+        audio.volume = 0.5;
+
+        songTitle.innerText = "anxiety."; 
+        artistName.innerText = "Keenyn Omari"; 
+        /*zene irányítás */
+    </script>
+    
+    <script src="index.js"></script> <!--animáció-->
+</body>
+</html>
