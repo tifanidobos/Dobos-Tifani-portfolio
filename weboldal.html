@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8"> <!--oldalfül-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weboldal</title>
+    <link rel="stylesheet" href="index.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logófehér.png">
+</head>
+<body>
+    <header> <!--fejléc ezt ne piszkáljam soha-->
+        <div class="logo">
+            <a href="index.html">
+                <img src="logófekete.png" alt="Dobos Tifani logó">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="rólam.html">Rólam</a></li>
+                <li><a href="portfólió.html">Portfólió</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                <li><a href="önéletrajz.html">Önéletrajz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+
+
+.kép4 {
+    position: absolute;
+            top: 26%; 
+            left: 9%; 
+    width: 60%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 0%;
+}
+
+.text-content p1{
+    color: black;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 25%; 
+            left: 55%; 
+}
+.text-content p2{
+    color: black;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            position: absolute;
+            top: 40%; 
+            left: 55%; 
+        }
+
+
+
+         /* zene stílus */
+         .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #181818;
+            padding: 15px;
+            width: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .music-player img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .music-info {
+            flex: 1;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .music-info h4 {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .music-info p {
+            margin: 3px 0 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .controls img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .controls img:hover {
+            opacity: 0.7;
+        }
+        /* zene stílus */
+    </style>
+
+<main class="kapcsolat-page">
+    <!--<div class="kép1">
+        <img src="https://media.giphy.com/media/S8lB8ff7GtCuc/giphy.gif?cid=ecf05e47co5umra57qpbv8sh4wcv7g517eqzttgorgjlg1og&ep=v1_gifs_search&rid=giphy.gif&ct=g" 
+             alt="GIF animáció" class="kép1">
+    </div>
+    
+    <div class="kép2">
+        <img src="https://media.giphy.com/media/HteV6g0QTNxp6/giphy.gif?cid=ecf05e47ydzpsxzpnki0u7v0ewjuixecdmuqwsj3l84j3i6n&ep=v1_gifs_search&rid=giphy.gif&ct=g" 
+             alt="GIF animáció" class="kép2">
+    </div>
+
+    <div class="kép3">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3l4OGZ3ejhqd2psdmM4NDkxazNtNGYyMDF2eTFkcjM3MjdvOG5mNSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/T8Dhl1KPyzRqU/giphy.gif" 
+             alt="GIF animáció" class="kép3">
+    </div>-->
+
+    <div class="kép4">
+        <img src="https://techcrunch.com/wp-content/uploads/2017/07/source.gif?w=720" 
+             alt="GIF animáció" class="kép4">
+    </div>
+
+    <div class="text-content">
+        <p1>Weboldal</p1>    
+        <p2>Március 11-én hoztam létre az első html kódom, miu-<br>tán megnéztem egy weblap szerkesztő tutorial vide-<br>ót. A balesetem miatt hirtelen lett nagyon sok időm,<br>ez nagyon megviselt lelkileg és új célt kerestem ma-<br>gamnak, hogy a citromból limonádét készítsek. Én<br>azt vallom, mindent meg lehet tanulni, csak kitartás<br>és akarat kell hozzá. Tisztában vagyok azzal, honnan<br>hová jutottam ezalatt a két hét alatt, és ugyan még<br>rengeteg tanulni valóm van, de már alig várom.</p2>     
+    </div>
+</main>
+
+<!-- Zene -->
+<audio id="myAudio" loop>
+    <source src="Pedro.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-player">
+    <img src="Pedro.jpg" alt="Album borító" id="albumCover">
+    <div class="music-info">
+        <h4 id="songTitle">Cím: Pedro</h4>
+        <p id="artistName">Előadó: Jaxomy, Raffaella Carrà</p>
+    </div>
+    <div class="controls">
+        <img src="start.png" alt="Play" onclick="playAudio()">
+        <img src="pause.png" alt="Pause" onclick="pauseAudio()">
+        <img src="reply.png" alt="Restart" onclick="restartAudio()">
+    </div>
+</div>
+<!-- Zene -->
+
+<script>
+    /*zene irányítás */
+    const audio = document.getElementById("myAudio");
+    const songTitle = document.getElementById("songTitle");
+    const artistName = document.getElementById("artistName");
+    const albumCover = document.getElementById("albumCover");
+
+    function playAudio() {
+        audio.play();
+    }
+
+    function pauseAudio() {
+        audio.pause();
+    }
+
+    function restartAudio() {
+        audio.currentTime = 0;
+        audio.play();
+    }
+
+    audio.volume = 0.5;
+
+    songTitle.innerText = "Pedro"; 
+    artistName.innerText = "Jaxomy, Raffaella Carrà"; 
+    /*zene irányítás */
+</script>
+
+    <script src="index.js"></script><!--animáció-->
+</body>
+</html>

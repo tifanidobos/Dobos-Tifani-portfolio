@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8"> <!--oldalfül-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Pure</title>
+    <link rel="stylesheet" href="index.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logófehér.png">
+</head>
+<body>
+    <header> <!--fejléc ezt ne piszkáljam soha-->
+        <div class="logo">
+            <a href="index.html">
+                <img src="logófekete.png" alt="Dobos Tifani logó">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="rólam.html">Rólam</a></li>
+                <li><a href="portfólió.html">Portfólió</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                <li><a href="önéletrajz.html">Önéletrajz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+
+.kép {
+    width: 44%;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    position: absolute;
+            top: 25%; 
+            left: 5%; 
+}
+
+.szöveg {
+    width: 44%;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    position: absolute;
+            top: 25%; 
+            left: 29%; 
+}
+
+.text-content p1{
+    color: black;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 25%; 
+            left: 55%; 
+}
+.text-content p2{
+    color: black;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            position: absolute;
+            top: 40%; 
+            left: 55%; 
+        }
+
+
+         /* zene stílus */
+         .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #181818;
+            padding: 15px;
+            width: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .music-player img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .music-info {
+            flex: 1;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .music-info h4 {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .music-info p {
+            margin: 3px 0 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .controls img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .controls img:hover {
+            opacity: 0.7;
+        }
+        /* zene stílus */
+    </style>
+
+<main class="kapcsolat-page">
+    <div class="kép" controls>
+        <img src="próba.png" alt="kép" class="kép">
+    </div> 
+
+    <div class="szöveg" controls>
+        <img src="próba1.png" alt="kép" class="kép">
+    </div> 
+
+    <div class="text-content">
+        <p1>Családi vállalkozás</p1>    
+        <p2>Anyukám natúr kozmetikumokat gyártó vállalkozá-<br>sában, egy mindenes szerepet töltök be. Ha kell, be-<br>segítek a gyártásba, vagy workshopot tartok, de egy<br>biztos, hogy a nyomdai anyagok elkészítéséért én fe-<br>lelek. Ebbe tartoznak a különböző termékek címkéi,<br>ajándék és köszönő kártyák, valamint a szórólapok.<br>Hálás vagyok, hogy a rámbízott feladatokkal mindig<br>új ismereteket sajátíthatok el, így alkothattam meg<br>én az online időpont foglaló rendszerünket is.</p2>       
+    </div>
+</main>
+
+<!-- Zene -->
+<audio id="myAudio" loop>
+    <source src="mercy.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-player">
+    <img src="mercy.jpg" alt="Album borító" id="albumCover">
+    <div class="music-info">
+        <h4 id="songTitle">Cím: Mercy</h4>
+        <p id="artistName">Előadó: Duffy</p>
+    </div>
+    <div class="controls">
+        <img src="start.png" alt="Play" onclick="playAudio()">
+        <img src="pause.png" alt="Pause" onclick="pauseAudio()">
+        <img src="reply.png" alt="Restart" onclick="restartAudio()">
+    </div>
+</div>
+<!-- Zene -->
+
+<script>
+
+    /*zene irányítás */
+    const audio = document.getElementById("myAudio");
+    const songTitle = document.getElementById("songTitle");
+    const artistName = document.getElementById("artistName");
+    const albumCover = document.getElementById("albumCover");
+
+    function playAudio() {
+        audio.play();
+    }
+
+    function pauseAudio() {
+        audio.pause();
+    }
+
+    function restartAudio() {
+        audio.currentTime = 0;
+        audio.play();
+    }
+
+    audio.volume = 0.5;
+
+    songTitle.innerText = "Mercy"; 
+    artistName.innerText = "Duffy"; 
+    /*zene irányítás */
+</script>
+
+    <script src="index.js"></script><!--animáció-->
+</body>
+</html>
