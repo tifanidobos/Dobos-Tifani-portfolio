@@ -31,40 +31,40 @@
 
         .kapcsolat-page p1 {
             color: black;
-            font-size: 2.5rem;
+            font-size: 3.5vw;
             font-family: 'Playfair Display', serif;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            text-shadow: 0.2vw 0.2vw 1vw rgba(0, 0, 0, 0.5);
             position: absolute;
             top: 25%; 
             left: 13%; 
         }
 
         body {
-            background: url('simonscatthree.png') no-repeat 50% 75% fixed;
+            background: url('simonscatthree.png') no-repeat 50% 75%;
             background-size: 35%;
         }
        
         
 
          /* zene stílus */
-         .music-player {
+        .music-player {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 1.5vw;
+            right: 1.5vw;
             background: #181818;
-            padding: 15px;
-            width: 300px;
-            border-radius: 10px;
+            padding: 1vw;
+            width: 23vw;
+            border-radius: 1vw;
             display: flex;
             align-items: center;
-            gap: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            gap: 1.5vw;
+            box-shadow: 0.2vw 0.2vw 1vw rgba(0, 0, 0, 0.5);
         }
 
         .music-player img {
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
+            width: 5vw;
+            height: 5vw;
+            border-radius: 0.8vw;
             object-fit: cover;
         }
 
@@ -72,34 +72,34 @@
             flex: 1;
             color: white;
             font-family: Arial, sans-serif;
-        }
-
-        .music-info h4 {
-            margin: 0;
-            font-size: 14px;
+          font-size: 1.1vw;
         }
 
         .music-info p {
-            margin: 3px 0 0;
-            font-size: 12px;
+            margin: 0.3vw 0 0;
+            font-size: 0.9vw;
             color: #aaa;
         }
 
         .controls {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 0.9vw;
         }
 
         .controls img {
-            width: 24px;
-            height: 24px;
+            width: 1.9vw;
+            height: 1.9vw;
             cursor: pointer;
             transition: 0.3s;
         }
 
         .controls img:hover {
             opacity: 0.7;
+        }
+
+        .music-info h4 {
+            margin: 0;
         }
         /* zene stílus */
 
@@ -112,18 +112,18 @@
 .button-container button {
     background-color: none;
     color: black;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     font-family: 'Montserrat', sans-serif;
-    padding: 10px 20px;
+    padding: 0.7vw 1.5vw;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0.5vw;
     transition: 0.3s ease;
     position: absolute;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0.2vw 0.2vw 1vw rgba(0, 0, 0, 0.5);
 }
 .button-container button:nth-child(1) {
-    top: 18%;
+    top: 20%;
     left: 42%;
 }
 
@@ -203,7 +203,7 @@
 
     audio.volume = 0.5;
 
-    songTitle.innerText = "Tuyo-Narcos Theme"; 
+    songTitle.innerText = "Narcos Theme"; 
     artistName.innerText = "Rodrigo Amarante"; 
     /*zene irányítás */
 </script>

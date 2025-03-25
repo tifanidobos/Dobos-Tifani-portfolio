@@ -7,55 +7,56 @@
     <link rel="stylesheet" href="index.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="logófehér.png">
+
     <style>
+        /* cica */
         .önéletrajz-page img {
-    width: 30%; 
-    position: absolute;
-}
+        width: 30vw; 
+        position: absolute;
+        }
 
-.icon1 {
-    width: 80px; 
-    height: auto;
-    top: 38%;
-    left: 30%;
-}
-
+        .icon1 {
+        height: auto;
+        top: 38%;
+        left: 31%;
+        }
+        /* cím */
         .önéletrajz-page p1 {
             color: black;
-            font-size: 2.5rem;
+            font-size: 3.5vw;
             font-family: 'Playfair Display', serif;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            text-shadow: 0.2vw 0.2vw 0.6vw rgba(0, 0, 0, 0.5);
             position: absolute;
             top: 25%; 
             left: 40%; 
         }
-
+        /* kérdőjel */
         .question-mark {
             color: black;
-            font-size: 2.5rem;
+            font-size: 3.5vw;
             font-family: 'Playfair Display', serif;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            text-shadow: 0.2vw 0.2vw 1vw rgba(0, 0, 0, 0.5);
             display: inline-block;
             opacity: 0;
-            transform: translateX(50px);
+            transform: translateX(5vw);
             animation: slideIn 0.5s ease-out forwards 0.5s;
         }
 
         @keyframes slideIn {
             from {
                 opacity: 0;
-                transform: translateX(20px);
+                transform: translateX(2vw);
             }
             to {
                 opacity: 1;
                 transform: translateX(0);
             }
         }
-
+        /* szöveg */
         .önéletrajz-page a {
             color: black;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.5vw;
             font-family: 'Montserrat', sans-serif;
             position: absolute;
             top: 60%;
@@ -72,22 +73,22 @@
         /* zene stílus */
         .music-player {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 1.5vw;
+            right: 1.5vw;
             background: #181818;
-            padding: 15px;
-            width: 300px;
-            border-radius: 10px;
+            padding: 1vw;
+            width: 23vw;
+            border-radius: 1vw;
             display: flex;
             align-items: center;
-            gap: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            gap: 1.5vw;
+            box-shadow: 0.2vw 0.2vw 1vw rgba(0, 0, 0, 0.5);
         }
 
         .music-player img {
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
+            width: 5vw;
+            height: 5vw;
+            border-radius: 0.8vw;
             object-fit: cover;
         }
 
@@ -95,28 +96,24 @@
             flex: 1;
             color: white;
             font-family: Arial, sans-serif;
-        }
-
-        .music-info h4 {
-            margin: 0;
-            font-size: 14px;
+          font-size: 1.2vw;
         }
 
         .music-info p {
-            margin: 3px 0 0;
-            font-size: 12px;
+            margin: 0.3vw 0 0;
+            font-size: 0.9vw;
             color: #aaa;
         }
 
         .controls {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 0.9vw;
         }
 
         .controls img {
-            width: 24px;
-            height: 24px;
+            width: 1.9vw;
+            height: 1.9vw;
             cursor: pointer;
             transition: 0.3s;
         }
@@ -124,9 +121,14 @@
         .controls img:hover {
             opacity: 0.7;
         }
+
+        .music-info h4 {
+            margin: 0;
+        }
         /* zene stílus */
     </style>
 </head>
+
 <body>
     <header> <!--fejléc ezt ne piszkáljam soha-->
         <div class="logo">
@@ -144,6 +146,7 @@
         </nav>
     </header>
 
+    <!--változó-->
     <main class="önéletrajz-page">
         <p1>Önéletrajz<span class="question-mark">?</span></p1>
         <p2><a href="Dobos Tifani önéletrajz.pdf" download="Dobos Tifani önéletrajz.pdf" class="download-link">Itt tudod letölteni PDF-ben.</a></p2>

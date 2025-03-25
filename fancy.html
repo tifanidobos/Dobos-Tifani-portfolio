@@ -29,7 +29,7 @@
 
         .kapcsolat-page p1 {
             color: black;
-            font-size: 2.5rem;
+            font-size: 3.5vw;
             font-family: 'Playfair Display', serif;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
             position: absolute;
@@ -38,7 +38,7 @@
         }
         .kapcsolat-page p2 {
             color: black;
-            font-size: 1rem;
+            font-size: 1.3vw;
             font-family: 'Montserrat', sans-serif;
             position: absolute;
             top: 45%; 
@@ -46,10 +46,10 @@
         }
 
         .aji {
-    height: 200px;
+    height: 16vw;
     position: absolute;
     left: 52%;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0.2vw 0.2vw 0.6vw rgba(0, 0, 0, 0.5);
     cursor: pointer; 
     transition: all 0.3s ease-in-out;
 }
@@ -58,9 +58,9 @@
 .kártya2 { top: 44.5%; z-index: 1; } 
 
 .random-kep {
-    height: 150px;
+    height: 13vw;
     position: absolute;
-    transition: none; /* Nem változik kattintásra */
+    transition: none; 
     cursor: default;
     
 }
@@ -70,24 +70,24 @@
 
 
          /* zene stílus */
-         .music-player {
+        .music-player {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 1.5vw;
+            right: 1.5vw;
             background: #181818;
-            padding: 15px;
-            width: 300px;
-            border-radius: 10px;
+            padding: 1vw;
+            width: 23vw;
+            border-radius: 1vw;
             display: flex;
             align-items: center;
-            gap: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            gap: 1.5vw;
+            box-shadow: 0.2vw 0.2vw 1vw rgba(0, 0, 0, 0.5);
         }
 
         .music-player img {
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
+            width: 5vw;
+            height: 5vw;
+            border-radius: 0.8vw;
             object-fit: cover;
         }
 
@@ -95,28 +95,24 @@
             flex: 1;
             color: white;
             font-family: Arial, sans-serif;
-        }
-
-        .music-info h4 {
-            margin: 0;
-            font-size: 14px;
+          font-size: 1.05vw;
         }
 
         .music-info p {
-            margin: 3px 0 0;
-            font-size: 12px;
+            margin: 0.3vw 0 0;
+            font-size: 0.9vw;
             color: #aaa;
         }
 
         .controls {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 0.9vw;
         }
 
         .controls img {
-            width: 24px;
-            height: 24px;
+            width: 1.9vw;
+            height: 1.9vw;
             cursor: pointer;
             transition: 0.3s;
         }
@@ -124,12 +120,16 @@
         .controls img:hover {
             opacity: 0.7;
         }
+
+        .music-info h4 {
+            margin: 0;
+        }
         /* zene stílus */
     </style>
 
     <main class="kapcsolat-page">
         <p1>,,,</p1>
-        <p2>Ennek a projektnek a során nagyon fontos volt számom-<br>ra, hogy a személyiségem és a mentalitásom, akár csak<br> egy kicsit is, visszaköszönjön minden oldalon. A zenék<br>sokszínűségével a nyitottságomat, az esetenként vicces<br>szövegekkel a bátorságomat akartam kifejezni. Ezekkel<br>szimbolizálva, hogy fel merem vállalni azt, aki vagyok de<br>mindezt kultúrált, precíz keretek között megvalósítva.</p2>
+        <p2>Ennek a projektnek a során nagyon fontos volt szám-<br>omra, hogy a személyiségem és a mentalitásom, akár<br> egy kicsit is, visszaköszönjön minden oldalon. A zenék<br>sokszínűségével a nyitottságom, az esetenként megle-<br>pő szövegekkel a bátorságomat akartam kifejezni. Ez-<br>el szimbolizálva, hogy fel merem vállalni aki vagyok, de<br>mindezt kultúrált, precíz keretek között megvalósítva.</p2>
         <img src="fancy1.png" alt="Aji kártya 1" class="aji kártya1">
         <img src="fancy2.png" alt="Aji kártya 2" class="aji kártya2">
         <img src="oda.png" alt="Random kép 1" class="random-kep kep1">
@@ -145,7 +145,7 @@
 <div class="music-player">
     <img src="Bongo Cha Cha Cha.jpg" alt="Album borító" id="albumCover">
     <div class="music-info">
-        <h4 id="songTitle">Cím: Bongo Cha Cha Cha</h4>
+        <h4 id="songTitle">Cím: Bongo Cha Cha</h4>
         <p id="artistName">Előadó: Goodboys</p>
     </div>
     <div class="controls">
